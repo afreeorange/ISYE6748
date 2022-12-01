@@ -1,18 +1,26 @@
+import { useState } from "react";
+import { ImPointRight } from "react-icons/im";
 import { HiOutlineDatabase } from "react-icons/hi";
 import { TbCircle1, TbCircle2, TbCircle3 } from "react-icons/tb";
 import { Col, Row } from "reactstrap";
 
 import LayersExample from "./layers.jpg";
-import "./Data.css";
 import ConditionSearchBox from "../components/ConditionSearchBox";
-import { useState } from "react";
-import { ImPointRight } from "react-icons/im";
+import Hierarchy from "../components/Hierarchy";
+import { L } from "../layers";
+
+import "./Data.css";
 
 const Component: React.FC = () => {
-  const [indices, setIndices] = useState([]);
+  const [indices, setIndices] = useState<number[]>([]);
 
   return (
-    <div className="data">
+    <div
+      className="data mb-5"
+      style={{
+        paddingBottom: indices.length > 0 ? "0em" : "30em",
+      }}
+    >
       <Row>
         <Col>
           <h1 className="border-bottom pb-2">
@@ -48,7 +56,11 @@ const Component: React.FC = () => {
           our own assignment of a <span className="fw-600">Layer</span> to
           various levels of this hierarchy.
         </p>
-        <img src={LayersExample} className="mw-100 hierarchy" />
+        <img
+          src={LayersExample}
+          className="mw-100 hierarchy"
+          alt="Example of ICD10 Class hierarchy"
+        />
         <p className="mt-4">
           When you use this website and see the results of a query,
           <ul className="mt-3">
@@ -109,11 +121,26 @@ const Component: React.FC = () => {
           <a href="/all_layers_list.json">as a list</a>.
         </p>
 
-        {/* <ConditionSearchBox
-          resetCallback={() => null}
+        <hr className="my-4" />
+
+        <h2>Search for Disease Conditions</h2>
+
+        <p>
+          Search for a condition below to see it in the ICD10 hierarchy (up to
+          Layer 3)
+        </p>
+
+        {indices.length > 0 && (
+          <div className="mb-3">
+            <Hierarchy condition={L[indices[0]]} />
+          </div>
+        )}
+
+        <ConditionSearchBox
+          resetCallback={() => setIndices([])}
           limitSelectionTo={1}
           selectionCallback={({ checkedIndices }) => setIndices(checkedIndices)}
-        /> */}
+        />
       </section>
     </div>
   );

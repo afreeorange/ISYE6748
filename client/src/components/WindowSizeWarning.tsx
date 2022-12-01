@@ -21,12 +21,11 @@ const Component: React.FC = () => {
           )}
           <Col>
             <h5>
-              We&#8217;re really sorry but we haven't yet gotten around to
-              optimizing this site's experience for screen widths lower than ~
-              <strong>{MIN_WIDTH_IN_PIXELS}px</strong> (you're at{" "}
-              <strong className="fw-600">{windowWidth}px</strong>). Please
-              stretch your browser window on your desktop or try this out on
-              your tablet by flipping it to landscape mode.
+              We&#8217;re really sorry but we haven't yet gotten to optimizing
+              this site's experience for mobile devices or screen widths lower
+              than ~<strong>{MIN_WIDTH_IN_PIXELS}px</strong> (you're at{" "}
+              <strong className="fw-600">{windowWidth}px</strong>). Please try
+              this site out on your desktop, laptop, or a tablet.
             </h5>
           </Col>
         </Row>

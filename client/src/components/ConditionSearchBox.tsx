@@ -160,7 +160,7 @@ const Component: React.FC<{
                       <span>You can select any number of codes.</span>
                     )}{" "}
                     {limitSelectionTo === 1 &&
-                      "You can pick another codes by clicking it."}
+                      "You can pick another code by clicking it."}
                     {checkedIndices.length !== limitSelectionTo &&
                       " Clear the box above to search for other codes."}
                   </span>
