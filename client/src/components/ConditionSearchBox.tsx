@@ -64,6 +64,7 @@ const Results: React.FC<{
 };
 
 const Component: React.FC<{
+  autofocus?: boolean;
   limitSelectionTo?: number | null;
   selectionCallback: ({
     term,
@@ -77,7 +78,12 @@ const Component: React.FC<{
    * TODO: Deselection mechanism...?
    */
   // onDeselection?: (index: number) => unknown;
-}> = ({ limitSelectionTo = null, selectionCallback, resetCallback }) => {
+}> = ({
+  limitSelectionTo = null,
+  selectionCallback,
+  resetCallback,
+  autofocus = true,
+}) => {
   /**
    * NOTE: This component should maintain its own internal state and not rely
    * on global state! This is what callbacks are for!
@@ -131,7 +137,7 @@ const Component: React.FC<{
           <Form>
             <FormGroup>
               <Input
-                autoFocus
+                autoFocus={autofocus}
                 placeholder="Type an ICD10 code or a description (e.g. 'conjunctivitis' or 'heart')"
                 type={"search"}
                 onChange={(e) => handleChange(e.target.value)}

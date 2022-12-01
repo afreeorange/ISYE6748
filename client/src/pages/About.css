@@ -1,7 +1,7 @@
 .team-member img {
   width: 16em;
   height: 16em;
-  border: 1px solid var(--color-gray-400);
+  border: 1px solid var(--color-red);
   padding: 0.25em;
 }
 

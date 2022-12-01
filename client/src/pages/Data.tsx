@@ -46,6 +46,7 @@ const Component: React.FC = () => {
           >
             project's Github repository
           </a>
+          .
         </p>
         <p>
           ICD10 Codes are a disease classification taxonomy developed and
@@ -137,6 +138,7 @@ const Component: React.FC = () => {
         )}
 
         <ConditionSearchBox
+          autofocus={false}
           resetCallback={() => setIndices([])}
           limitSelectionTo={1}
           selectionCallback={({ checkedIndices }) => setIndices(checkedIndices)}

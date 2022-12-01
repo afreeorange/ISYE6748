@@ -70,10 +70,12 @@ const Similarity: React.FC<{ results: SimilarityResponse }> = ({ results }) => {
       <p>
         {" "}
         <span className="text-muted fw-300">
-          Click any patient avatar to see each patient's conditions. We'll only
-          show you the{" "}
+          <span className="fw-600">
+            Click any patient avatar to see each related patient's conditions
+          </span>
+          . We'll only show you the{" "}
           <span className="fw-600">five most similar patients</span> at each
-          layer of specificity The numbers under each avatar denote how similar
+          level of specificity. The numbers under each avatar denote how similar
           Member {results.thisPatient?.id.toString()} is to other patients on a
           continuous scale of zero (not similar at all) to one (is the same
           person). The rightmost column shows how many times we observed the

@@ -152,26 +152,29 @@ const Component: React.FC = () => {
   return (
     <>
       <Alert color="danger" className="mt-3">
-        <ImPointRight className="icon" /> <span className="fw-800">Note:</span>{" "}
-        This is <span className="fw-600">unfinished</span> and will{" "}
-        <span className="fw-600">simulate</span> results. Please{" "}
-        <NavLink to={"/about"} className="link-danger">
+        <ImPointRight className="icon" /> This feature is a{" "}
+        <span className="fw-600">user-experience experiment</span>, is{" "}
+        <span className="fw-600">unfinished</span>, and will display journey of
+        a randomly chosen member. Please{" "}
+        <a href="/Report.pdf" className="link-danger">
           read our report
-        </NavLink>{" "}
-        for more information. In the meantime, please enjoy playing around with
-        our proposed interface!
+        </a>{" "}
+        for more information on the challenges of implementing this feature.{" "}
+        <span className="fw-600"> We do hope to make it work well in the future</span>. In the
+        meantime, please enjoy playing around with our proposed interface!
       </Alert>
 
       {newPatientSearchState === "idle" && <BuildABear />}
 
-      {newPatientSearchState === "error" && newPatientSearchResults === null && (
-        <UpstreamError
-          onButtonClick={() => {
-            resetPatientState(null);
-            setActiveAnalysis("__patients_new");
-          }}
-        />
-      )}
+      {newPatientSearchState === "error" &&
+        newPatientSearchResults === null && (
+          <UpstreamError
+            onButtonClick={() => {
+              resetPatientState(null);
+              setActiveAnalysis("__patients_new");
+            }}
+          />
+        )}
 
       {newPatientSearchState === "processed" &&
         newPatientSearchResults !== null && (
