@@ -1,0 +1,550 @@
+{
+  "A00_B99": {
+    "children": [
+      "A00_A09",
+      "A15_A19",
+      "A20_A28",
+      "A30_A49",
+      "A50_A64",
+      "A65_A69",
+      "A70_A74",
+      "A75_A79",
+      "A80_A89",
+      "A90_A99",
+      "B00_B09",
+      "B10_B10",
+      "B15_B19",
+      "B20_B20",
+      "B25_B34",
+      "B35_B49",
+      "B50_B64",
+      "B65_B83",
+      "B85_B89",
+      "B90_B94",
+      "B95_B97",
+      "B99_B99"
+    ],
+    "code": "A00_B99",
+    "description": "Certain infectious and parasitic diseases",
+    "displayCode": "A00-B99",
+    "hierarchy": [
+      "A00_B99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "C00_D49": {
+    "children": [
+      "C00_C14",
+      "C15_C26",
+      "C30_C39",
+      "C40_C41",
+      "C43_C44",
+      "C45_C49",
+      "C50_C50",
+      "C51_C58",
+      "C60_C63",
+      "C64_C68",
+      "C69_C72",
+      "C73_C75",
+      "C76_C80",
+      "C7A_C7A",
+      "C7B_C7B",
+      "C81_C96",
+      "D00_D09",
+      "D10_D36",
+      "D37_D48",
+      "D3A_D3A",
+      "D49_D49"
+    ],
+    "code": "C00_D49",
+    "description": "Neoplasms",
+    "displayCode": "C00-D49",
+    "hierarchy": [
+      "C00_D49"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "D50_D89": {
+    "children": [
+      "D50_D53",
+      "D55_D59",
+      "D60_D64",
+      "D65_D69",
+      "D70_D77",
+      "D78_D78",
+      "D80_D89"
+    ],
+    "code": "D50_D89",
+    "description": "Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism",
+    "displayCode": "D50-D89",
+    "hierarchy": [
+      "D50_D89"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "E00_E89": {
+    "children": [
+      "E00_E07",
+      "E08_E13",
+      "E15_E16",
+      "E20_E35",
+      "E36_E36",
+      "E40_E46",
+      "E50_E64",
+      "E65_E68",
+      "E70_E88",
+      "E89_E89"
+    ],
+    "code": "E00_E89",
+    "description": "Endocrine, nutritional and metabolic diseases",
+    "displayCode": "E00-E89",
+    "hierarchy": [
+      "E00_E89"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "F01_F99": {
+    "children": [
+      "F01_F09",
+      "F10_F19",
+      "F20_F29",
+      "F30_F39",
+      "F40_F48",
+      "F50_F59",
+      "F60_F69",
+      "F70_F79",
+      "F80_F89",
+      "F90_F98",
+      "F99_F99"
+    ],
+    "code": "F01_F99",
+    "description": "Mental, Behavioral and Neurodevelopmental disorders",
+    "displayCode": "F01-F99",
+    "hierarchy": [
+      "F01_F99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "G00_G99": {
+    "children": [
+      "G00_G09",
+      "G10_G14",
+      "G20_G26",
+      "G30_G32",
+      "G35_G37",
+      "G40_G47",
+      "G50_G59",
+      "G60_G65",
+      "G70_G73",
+      "G80_G83",
+      "G89_G99"
+    ],
+    "code": "G00_G99",
+    "description": "Diseases of the nervous system",
+    "displayCode": "G00-G99",
+    "hierarchy": [
+      "G00_G99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "H00_H59": {
+    "children": [
+      "H00_H05",
+      "H10_H11",
+      "H15_H22",
+      "H25_H28",
+      "H30_H36",
+      "H40_H42",
+      "H43_H44",
+      "H46_H47",
+      "H49_H52",
+      "H53_H54",
+      "H55_H57",
+      "H59_H59"
+    ],
+    "code": "H00_H59",
+    "description": "Diseases of the eye and adnexa",
+    "displayCode": "H00-H59",
+    "hierarchy": [
+      "H00_H59"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "H60_H95": {
+    "children": [
+      "H60_H62",
+      "H65_H75",
+      "H80_H83",
+      "H90_H94",
+      "H95_H95"
+    ],
+    "code": "H60_H95",
+    "description": "Diseases of the ear and mastoid process",
+    "displayCode": "H60-H95",
+    "hierarchy": [
+      "H60_H95"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "I00_I99": {
+    "children": [
+      "I00_I02",
+      "I05_I09",
+      "I10_I16",
+      "I20_I25",
+      "I26_I28",
+      "I30_I5A",
+      "I60_I69",
+      "I70_I79",
+      "I80_I89",
+      "I95_I99"
+    ],
+    "code": "I00_I99",
+    "description": "Diseases of the circulatory system",
+    "displayCode": "I00-I99",
+    "hierarchy": [
+      "I00_I99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "J00_J99": {
+    "children": [
+      "J00_J06",
+      "J09_J18",
+      "J20_J22",
+      "J30_J39",
+      "J40_J47",
+      "J60_J70",
+      "J80_J84",
+      "J85_J86",
+      "J90_J94",
+      "J95_J95",
+      "J96_J99"
+    ],
+    "code": "J00_J99",
+    "description": "Diseases of the respiratory system",
+    "displayCode": "J00-J99",
+    "hierarchy": [
+      "J00_J99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "K00_K95": {
+    "children": [
+      "K00_K14",
+      "K20_K31",
+      "K35_K38",
+      "K40_K46",
+      "K50_K52",
+      "K55_K64",
+      "K65_K68",
+      "K70_K77",
+      "K80_K87",
+      "K90_K95"
+    ],
+    "code": "K00_K95",
+    "description": "Diseases of the digestive system",
+    "displayCode": "K00-K95",
+    "hierarchy": [
+      "K00_K95"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "L00_L99": {
+    "children": [
+      "L00_L08",
+      "L10_L14",
+      "L20_L30",
+      "L40_L45",
+      "L49_L54",
+      "L55_L59",
+      "L60_L75",
+      "L76_L76",
+      "L80_L99"
+    ],
+    "code": "L00_L99",
+    "description": "Diseases of the skin and subcutaneous tissue",
+    "displayCode": "L00-L99",
+    "hierarchy": [
+      "L00_L99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "M00_M99": {
+    "children": [
+      "M00_M02",
+      "M04_M04",
+      "M05_M14",
+      "M15_M19",
+      "M20_M25",
+      "M26_M27",
+      "M30_M36",
+      "M40_M43",
+      "M45_M49",
+      "M50_M54",
+      "M60_M63",
+      "M65_M67",
+      "M70_M79",
+      "M80_M85",
+      "M86_M90",
+      "M91_M94",
+      "M95_M95",
+      "M96_M96",
+      "M97_M97",
+      "M99_M99"
+    ],
+    "code": "M00_M99",
+    "description": "Diseases of the musculoskeletal system and connective tissue",
+    "displayCode": "M00-M99",
+    "hierarchy": [
+      "M00_M99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "N00_N99": {
+    "children": [
+      "N00_N08",
+      "N10_N16",
+      "N17_N19",
+      "N20_N23",
+      "N25_N29",
+      "N30_N39",
+      "N40_N53",
+      "N60_N65",
+      "N70_N77",
+      "N80_N98",
+      "N99_N99"
+    ],
+    "code": "N00_N99",
+    "description": "Diseases of the genitourinary system",
+    "displayCode": "N00-N99",
+    "hierarchy": [
+      "N00_N99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "O00_O9A": {
+    "children": [
+      "O00_O08",
+      "O09_O09",
+      "O10_O16",
+      "O20_O29",
+      "O30_O48",
+      "O60_O77",
+      "O80_O82",
+      "O85_O92",
+      "O94_O9A"
+    ],
+    "code": "O00_O9A",
+    "description": "Pregnancy, childbirth and the puerperium",
+    "displayCode": "O00-O9A",
+    "hierarchy": [
+      "O00_O9A"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "P00_P96": {
+    "children": [
+      "P00_P04",
+      "P05_P08",
+      "P09_P09",
+      "P10_P15",
+      "P19_P29",
+      "P35_P39",
+      "P50_P61",
+      "P70_P74",
+      "P76_P78",
+      "P80_P83",
+      "P84_P84",
+      "P90_P96"
+    ],
+    "code": "P00_P96",
+    "description": "Certain conditions originating in the perinatal period",
+    "displayCode": "P00-P96",
+    "hierarchy": [
+      "P00_P96"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "Q00_Q99": {
+    "children": [
+      "Q00_Q07",
+      "Q10_Q18",
+      "Q20_Q28",
+      "Q30_Q34",
+      "Q35_Q37",
+      "Q38_Q45",
+      "Q50_Q56",
+      "Q60_Q64",
+      "Q65_Q79",
+      "Q80_Q89",
+      "Q90_Q99"
+    ],
+    "code": "Q00_Q99",
+    "description": "Congenital malformations, deformations and chromosomal abnormalities",
+    "displayCode": "Q00-Q99",
+    "hierarchy": [
+      "Q00_Q99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "R00_R99": {
+    "children": [
+      "R00_R09",
+      "R10_R19",
+      "R20_R23",
+      "R25_R29",
+      "R30_R39",
+      "R40_R46",
+      "R47_R49",
+      "R50_R69",
+      "R70_R79",
+      "R80_R82",
+      "R83_R89",
+      "R90_R94",
+      "R97_R97",
+      "R99_R99"
+    ],
+    "code": "R00_R99",
+    "description": "Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified",
+    "displayCode": "R00-R99",
+    "hierarchy": [
+      "R00_R99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "S00_T88": {
+    "children": [
+      "S00_S09",
+      "S10_S19",
+      "S20_S29",
+      "S30_S39",
+      "S40_S49",
+      "S50_S59",
+      "S60_S69",
+      "S70_S79",
+      "S80_S89",
+      "S90_S99",
+      "T07_T07",
+      "T14_T14",
+      "T15_T19",
+      "T20_T25",
+      "T26_T28",
+      "T30_T32",
+      "T33_T34",
+      "T36_T50",
+      "T51_T65",
+      "T66_T78",
+      "T79_T79",
+      "T80_T88"
+    ],
+    "code": "S00_T88",
+    "description": "Injury, poisoning and certain other consequences of external causes",
+    "displayCode": "S00-T88",
+    "hierarchy": [
+      "S00_T88"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "U00_U85": {
+    "children": [
+      "U00_U49",
+      "U50_U85",
+      "V00_V09",
+      "V10_V19",
+      "V20_V29",
+      "V30_V39",
+      "V40_V49",
+      "V50_V59",
+      "V60_V69",
+      "V70_V79",
+      "V80_V89",
+      "V90_V94",
+      "V95_V97",
+      "V98_V99",
+      "W00_W19",
+      "W20_W49",
+      "W50_W64",
+      "W65_W74",
+      "W85_W99",
+      "X00_X08",
+      "X10_X19",
+      "X30_X39",
+      "X50_X50",
+      "X52_X58",
+      "X71_X83",
+      "X92_Y09",
+      "Y21_Y33",
+      "Y35_Y38",
+      "Y62_Y69",
+      "Y70_Y82",
+      "Y83_Y84",
+      "Y90_Y99"
+    ],
+    "code": "U00_U85",
+    "description": "Codes for special purposes",
+    "displayCode": "U00-U85",
+    "hierarchy": [
+      "U00_U85"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "V00_Y99": {
+    "children": [],
+    "code": "V00_Y99",
+    "description": "External causes of morbidity",
+    "displayCode": "V00-Y99",
+    "hierarchy": [
+      "V00_Y99"
+    ],
+    "layer": 1,
+    "weight": 1
+  },
+  "Z00_Z99": {
+    "children": [
+      "Z00_Z13",
+      "Z14_Z15",
+      "Z16_Z16",
+      "Z17_Z17",
+      "Z18_Z18",
+      "Z19_Z19",
+      "Z20_Z29",
+      "Z30_Z39",
+      "Z40_Z53",
+      "Z55_Z65",
+      "Z66_Z66",
+      "Z67_Z67",
+      "Z68_Z68",
+      "Z69_Z76",
+      "Z77_Z99"
+    ],
+    "code": "Z00_Z99",
+    "description": "Factors influencing health status and contact with health services",
+    "displayCode": "Z00-Z99",
+    "hierarchy": [
+      "Z00_Z99"
+    ],
+    "layer": 1,
+    "weight": 1
+  }
+}

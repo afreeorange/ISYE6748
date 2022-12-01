@@ -1,0 +1,32 @@
+.analyze-tabs .top-line {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--color-gray-300); /* This is gray-300 */
+}
+
+.react-tabs__tab-list {
+  margin: 0 0 0.75em;
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+.react-tabs__tab {
+  color: #ced4da; /* This is gray-400 */
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  bottom: -0.35em;
+}
+.react-tabs__tab:focus {
+  outline: none;
+}
+.react-tabs__tab:hover {
+  color: var(--color-orange);
+}
+.react-tabs__tab--selected {
+  color: var(--color-cyan);
+}

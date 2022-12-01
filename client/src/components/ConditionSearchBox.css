@@ -1,0 +1,21 @@
+/* Results */
+.condition-search-box table tbody tr td:last-child {
+  width: 10%;
+}
+
+.condition-search-box table .checked-code {
+  background-color: #eee;
+}
+.condition-search-box table .checked-code td:first-child::after {
+  content: " ✅";
+  display: inline;
+}
+
+.condition-search-box .saturated:not(.checked-code) {
+  opacity: 0.45;
+  filter: grayscale();
+}
+
+.condition-search-box .saturated:not(.checked-code):hover {
+  opacity: 0.85;
+}

@@ -1,0 +1,22 @@
+.team-member img {
+  width: 16em;
+  height: 16em;
+  border: 1px solid var(--color-gray-400);
+  padding: 0.25em;
+}
+
+.about p {
+  font-size: large;
+}
+
+.about a {
+  color: var(--color-red);
+}
+
+.about a:hover {
+  color: var(--color-orange);
+}
+
+.about section .icon {
+  color: var(--color-red);
+}

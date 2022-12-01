@@ -1,0 +1,15 @@
+{
+  "name": "icd10-ninja",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nikhil Anand <mail@nikhil.io> (https://nikhil.io)",
+  "scripts": {
+    "setup:server": "./scripts/setup-server.sh",
+    "setup:client": "./scripts/setup-client.sh",
+    "start:server": "./scripts/start-server.sh",
+    "start:client": "./scripts/start-client.sh",
+    "deploy:client": "./scripts/deploy-client.sh",
+    "provision:server": "./scripts/provision-server.sh"
+  },
+  "license": "GPL-3.0-only"
+}

@@ -1,0 +1,27 @@
+.data p {
+  font-size: large;
+}
+
+.data a {
+  color: var(--color-red);
+}
+
+.data a:hover {
+  color: var(--color-orange);
+}
+
+.data section .icon {
+  color: var(--color-red);
+}
+
+.data .layer-icon {
+  color: var(--color-red);
+  font-size: 1.25em;
+  bottom: 1px;
+  position: relative;
+  color: var(--color-cyan);
+}
+
+.data .layer-color {
+  color: var(--color-cyan);
+}

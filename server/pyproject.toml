@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "icd10-ninja-server"
+version = "1.0.0"
+description = "Server for the ICD10.ninja website"
+authors = ["Nikhil Anand <mail@nikhil.io>"]
+license = "GNU GPVv3"
+readme = "README.md"
+packages = [{include = "icd10_ninja_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+pandas = "^1.5.2"
+numpy = "^1.23.5"
+pyarrow = "^10.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
