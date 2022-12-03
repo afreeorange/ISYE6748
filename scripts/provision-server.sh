@@ -5,8 +5,6 @@ echo "RUN THIS FROM THE PROJECT ROOT AND NOT THE 'scripts' FOLDER!"
 
 set -euo pipefail
 
-cd
-
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install \
@@ -27,6 +25,10 @@ sudo npm i -g yarn http-server
 
 echo "Cleaning up"
 sudo apt -y autoremove
+
+echo "Setting up server reqirements"
+yarn
+yarn setup:server
 
 echo "Setting up the Gunicorn service"
 cp ./scripts/gunicorn.service /etc/systemd/system/gunicorn.service
