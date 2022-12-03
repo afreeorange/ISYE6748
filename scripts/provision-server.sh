@@ -26,12 +26,6 @@ echo "Installing Node in case we need it for some reason"
 curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-get install -y nodejs
 sudo npm i -g yarn http-server
 
-echo "Cloning project repo and installing dependencies"
-git clone https://github.com/afreeorange/ISYE6748.git
-pushd ISYE6748/server
-pip install -r requirements.txt
-popd
-
 echo "Cleaning up"
 sudo apt -y autoremove
 
