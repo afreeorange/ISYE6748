@@ -19,7 +19,6 @@ sudo apt -y install \
 
 echo "Setting up Python. We're not using virtual environments here. Don't care."
 sudo ln -s /usr/bin/python3 /usr/bin/python
-git clone https://github.com/afreeorange/ISYE6748.git
 pip install poetry gunicorn
 
 echo "Installing Node in case we need it for some reason"
