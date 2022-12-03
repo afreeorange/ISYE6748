@@ -31,9 +31,9 @@ yarn
 yarn setup:server
 
 echo "Setting up the Gunicorn service"
-cp ./scripts/gunicorn.service /etc/systemd/system/gunicorn.service
-cp ./scripts/gunicorn.socket /etc/systemd/system/gunicorn.socket
+sudo cp ./scripts/gunicorn.service /etc/systemd/system/gunicorn.service
+sudo cp ./scripts/gunicorn.socket /etc/systemd/system/gunicorn.socket
 
 echo "Setting up the Nginx service"
-cp ./scripts/nginx.icd10ninja /etc/nginx/sites-available/icd10ninja
-ln -s /etc/nginx/sites-available/icd10ninja /etc/nginx/sites-enabled/icd10ninja
+sudo cp ./scripts/nginx.icd10ninja /etc/nginx/sites-available/icd10ninja
+sudo ln -s /etc/nginx/sites-available/icd10ninja /etc/nginx/sites-enabled/icd10ninja
