@@ -10,10 +10,8 @@ cp -v data/processed/100-layer-frequencies* server/data/
 cp -v data/similarity_matrices/*.parquet server/data/
 echo "Done"
 
-if [[ -n "$ON_PROVISIONED_SERVER" ]]; then
-    echo "Installing dependencies"
-    pushd server
-    poetry install --no-root
-    popd
-    echo "Done"
-fi
+echo "Installing dependencies"
+pushd server
+poetry install --no-root
+popd
+echo "Done"

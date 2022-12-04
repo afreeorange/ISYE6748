@@ -31,7 +31,11 @@ apt -y autoremove
 
 echo "Setting up server"
 pip install flask pandas numpy scipy pyarrow
-ON_PROVISIONED_SERVER=1 yarn setup:server
+mkdir -p server/data
+cp -v data/layers/*.json server/data/
+cp -v data/processed/100-layer-frequencies* server/data/
+cp -v data/similarity_matrices/*.parquet server/data/
+echo "Done"
 
 echo "Setting up the Gunicorn service"
 cp ./scripts/gunicorn.service /etc/systemd/system/gunicorn.service
