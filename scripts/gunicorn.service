@@ -9,9 +9,8 @@ Group=ubuntu
 WorkingDirectory=/home/ubuntu/project/server
 ExecStart=/usr/bin/gunicorn \
           --access-logfile - \
-          --workers 8 \
           --bind unix:/run/gunicorn.sock \
-          wsgi:app
+          server:app
 
 [Install]
 WantedBy=multi-user.target

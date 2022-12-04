@@ -80,23 +80,24 @@ Deployed to EC2 instances behind an Application Load Balancer (ALB). We're using
 
 ### Server Provisioning
 
-From the root of this repo (one level above) run `yarn provision:server` as user `ubuntu`. It will set up the Application Server and the Reverse Proxy. Once it is finished,
+Clone this repo as user `ubuntu` and run the provisioning script as `root`.
 
 ```bash
-# Reload all daemons
-systemctl daemon-reload
+# As ubuntu
+cd
+git clone https://github.com/afreeorange/ISYE6748.git project
+sudo su -
+cd project
+./scripts/provision-server.sh
+```
 
-# Start the Gunicorn socket
-systemctl start gunicorn.service
+It will set up the Application Server and the Reverse Proxy. Once it is finished,
 
-# Test the connection. You should see a happy message.
+```bash
+# Test the connection. The API should say hello.
 curl --unix-socket /run/gunicorn.sock localhost
 
-# Start Nginx
-systemctl start nginx
-
-# Enable all services to survive reboots
-systemctl enable gunicorn.service
-systemctl enable gunicorn.socket
-systemctl enable nginx
+# Then use `journalctl` tail any service unit
+journalctl -u gunicorn.service -f
+journalctl -u nginx.service -f
 ```
