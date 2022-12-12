@@ -451,7 +451,7 @@ Here,
   \item $b_i$ is how much the item/ICD10 Class deviated away from the global mean.
 \end{itemize}
 
-A quick example: Say the global mean of the frequency of observation for Layer 1 codes is 4.3. A patient with \texttt{Member Life ID} 819 has a mean number of encounters equal to 1.2 (across all classes). This implies that $b_x = (1.2 - 4.3) = -3.1$ (because it is lower than the mean). Assume we are trying to predict this patient's rating/frequency for the Class I00-I99\footnote{Diseases of the circulatory system} and observe that, on average,  patients tend to have 5.9 encounters with this class. This implies that $b_x = (5.9 - 4.3) = 1.6$ (because it is higher than the mean)
+A quick example: Say the global mean of the frequency of observation for Layer 1 codes is 4.3. A patient with \texttt{Member Life ID} 819 has a mean number of encounters equal to 1.2 (across all classes). This implies that $b_x = (1.2 - 4.3) = -3.1$ (because it is lower than the mean). Assume we are trying to predict this patient's rating/frequency for the Class I00-I99\footnote{Diseases of the circulatory system} and observe that, on average,  patients tend to have 5.9 encounters with this class. This implies that $b_i = (5.9 - 4.3) = 1.6$ (because it is higher than the mean)
 
 Hence, the Global Baseline Estimate for Member 819 for class I00-I99 is $b_{xi} = (4.3 - 3.1 + 1.6) = 2.8$
 
@@ -773,7 +773,7 @@ Even if we intended to impart a temporal scale to our predictions, we would have
 
 \subsubsection*{Cost of Similarity and Synthetic Patients}
 
-The key issue with a na{\"i}ve memory-based Collaborative Filtering approach is fundamentally one of computational complexity. Equation \ref{eq:model} can yield ratings/frequencies based on \textit{both} item-item and user-user similarities in a neighborhoodof similarity. The cost of computing any similarity matrix is $O(n^2)$. On modern hardware, this is trivial for the 21, 255, and 1646 ICD10 Classes in our utility matrices for item-item similarity. The maximum number of computations is $\sim$3 million for the most specific ICD10 Layer with 1646 classe. On an M2 Macbook Air with 24GiB of memory, this operation took $\sim$20ms for the largest (Layer 3) matrix.
+The key issue with a na{\"i}ve memory-based Collaborative Filtering approach is fundamentally one of computational complexity. Equation \ref{eq:model} can yield ratings/frequencies based on \textit{both} item-item and user-user similarities in a neighborhood of similarity. The cost of computing any similarity matrix is $O(n^2)$. On modern hardware, this is trivial for the 21, 255, and 1646 ICD10 Classes in our utility matrices for item-item similarity. The maximum number of computations is $\sim$3 million for the most specific ICD10 Layer with 1646 classes. On an M2 Macbook Air with 24GiB of memory, this operation took $\sim$20ms for the largest (Layer 3) matrix.
 
 However, and for user-user similarities, the number of computations required grows to $100,000 \times 100,000 = 10$ Billion computations. A na{\"i}ve cosine similarity implementation took $\sim$40 minutes on average to generate for the \textit{least} specific Layer class using \texttt{sklearn}'s implementation and other heuristic approaches.
 
