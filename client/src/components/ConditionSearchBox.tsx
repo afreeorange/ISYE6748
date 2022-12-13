@@ -138,7 +138,7 @@ const Component: React.FC<{
             <FormGroup>
               <Input
                 autoFocus={autofocus}
-                placeholder="Type an ICD10 code or a description (e.g. 'conjunctivitis' or 'heart')"
+                placeholder="Type an ICD10 code or a description (e.g. 'conjunctivitis' or 'heart' or 'e54')"
                 type={"search"}
                 onChange={(e) => handleChange(e.target.value)}
                 value={term ? term : ""}
