@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ImPointRight, ImLab } from "react-icons/im";
-import { NavLink } from "react-router-dom";
 import { Alert, Button, Col, Row, Spinner } from "reactstrap";
 import ConditionSearchBox from "../../../components/ConditionSearchBox";
 import Avatar from "../../../components/PatientAvatar";

@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Row, Col, Button, Spinner, Badge } from "reactstrap";
 import { GrPowerReset } from "react-icons/gr";
 import { ImLab } from "react-icons/im";
-import { TbMoodSad } from "react-icons/tb";
 
 import ConditionHierarchy from "../../../components/Hierarchy";
 import Results from "./Results";
@@ -12,6 +11,7 @@ import services from "../../../services/api";
 import { StateContext } from "../../../state/Provider";
 import { AxiosError } from "axios";
 import UpstreamError from "../../../components/UpstreamError";
+import NotFound from "./NotFound";
 
 const Component: React.FC = () => {
   const {
@@ -172,17 +172,7 @@ const Component: React.FC = () => {
         <Results results={conditionSearchResults} />
       )}
       {conditionSearchState === "error" && conditionSearchResults !== null && (
-        <Row className="mt-4">
-          <Col sm={1}>
-            <TbMoodSad className="icon w-100 h-75" />
-          </Col>
-          <Col>
-            <h3>
-              We&#8217;re sorry but there was insufficient data about this
-              condition to make predictions. Please try a new search.
-            </h3>
-          </Col>
-        </Row>
+        <NotFound resetHandler={handleReset} />
       )}
       {conditionSearchState === "error" && conditionSearchResults === null && (
         <Row className="mt-4">
