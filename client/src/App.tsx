@@ -8,13 +8,13 @@ import StateProvider from "./state/Provider";
 import Processing from "./components/Processing";
 import Navigation from "./components/Navigation";
 import WindowSizeWarning from "./components/WindowSizeWarning";
-import Offline from "./components/Offline";
+// import Offline from "./components/Offline";
 
 import "./App.css";
 
 const App = () => (
   <StateProvider>
-    <Offline />
+    {/* <Offline /> */}
     <WindowSizeWarning />
     <Navigation />
     <Container className="pb-5">

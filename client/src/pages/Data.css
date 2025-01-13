@@ -1,17 +1,18 @@
+.data h1 {
+  color: var(--color-cyan);
+}
+
 .data p {
   font-size: large;
 }
 
 .data a {
-  color: var(--color-red);
+  color: var(--color-black);
+  /* text-decoration-color: var(--color-red); */
 }
 
 .data a:hover {
   color: var(--color-orange);
-}
-
-.data section .icon {
-  color: var(--color-red);
 }
 
 .data .layer-icon {

@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-yarn setup:client
+npm run setup:client
 
 # Start a live-reloading server
 cd client
-yarn
-yarn start
+npm i
+npm run start

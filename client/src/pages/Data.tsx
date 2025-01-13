@@ -25,7 +25,7 @@ const Component: React.FC = () => {
         <Col>
           <h1 className="border-bottom pb-2">
             <HiOutlineDatabase className="text-info icon" />{" "}
-            <span className="fw-600">The Data</span>
+            <span className="fw-600">Data</span>
           </h1>
         </Col>
       </Row>
@@ -102,15 +102,15 @@ const Component: React.FC = () => {
           <ul className="mt-3">
             <li>
               <a href="/layer_1.json">Layer One</a>{" "}
-              <span className="text-muted">(Very Broad Conditions)</span>
+              <span className="text-muted">&ndash; Very Broad Conditions</span>
             </li>
             <li>
               <a href="/layer_2.json">Layer Two</a>{" "}
-              <span className="text-muted">(Broad Conditions)</span>
+              <span className="text-muted">&ndash; Broad Conditions</span>
             </li>
             <li>
               <a href="/layer_3.json">Layer Three</a>{" "}
-              <span className="text-muted">(Broad Conditions)</span>
+              <span className="text-muted">&ndash; Specific Conditions</span>
             </li>
           </ul>
         </p>

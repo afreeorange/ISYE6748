@@ -2,40 +2,40 @@
 
 by Nikhil Anand (`@nanand33`) William Lam (`@wlam39`), and Shrea Shyam (`@sshyam3`)
 
-Team Repository for the Applied Practicum at [Georgia Tech's Analytics Program](https://www.analytics.gatech.edu/) 🐝
-
-👉 **Note**: If you have _any problems whatsoever_ with running things in this repository, please [email Nikhil](mailto:mail@nikhil.io).
+Team Repository for the Applied Practicum at [Georgia Tech's Analytics Program](https://www.analytics.gatech.edu/) 🐝 If you have any problems whatsoever with running things, please [email Nikhil](mailto:mail@nikhil.io?subject=icd10.ninja%20Repository).
 
 ## About this Project
 
 Please see our [Midterm Presentation](https://github.com/afreeorange/ISYE6748/blob/master/Mid-term%20Presentation/Presentation.pdf) for an overview and [the Final Report](https://github.com/afreeorange/ISYE6748/blob/master/Final%20Report/Report.pdf) for our details on our implementation.
 
-The results of our analysis and modeling are expressed via a Web Application (an SPA built with React) and an API server (a Flask application in Python). We will describe how to run these locally but if you don't want to bother, both are publicly available at [https://icd10.ninja](https://icd10.ninja).
+The results of our analysis and modeling are expressed via a Web Application (an SPA built with React) and an API server (a Flask application in Python). We will describe how to run these locally but if you don't want to bother, both are publicly available at [https://icd10.ninja](https://icd10.ninja)
 
 ## Running Our Application Locally
 
 You will need:
 
 - `bash` v4+. If you're on Windows, you can use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
-- [Node](https://nodejs.org/en/download/) v18+ with `yarn` v1.10+ installed globally (`npm i -g yarn`)
-- [Python](https://www.python.org/downloads/) v3.10+ with `poetry` installed globally (`pip install poetry`)
+- [Node](https://nodejs.org/en/download/) v18+
+- [Python](https://www.python.org/downloads/) v3.10+ with [`uv` installed](https://docs.astral.sh/uv/getting-started/installation/) (you can use the latter to install Python itself).
 
-We like `nvm` and `pyenv` to manage our environments but you can use whatever you'd like. Here's some copypasta to get our app running on your machine:
+Once you're set with these, open two terminal sessions.
 
 ```bash
-# Let's start with the Client. This will run `yarn` to install dependencies,
-# copy some required static assets into place and run a local server at
+# In one session, let's start with the Client. This will install
+# dependencies, copy some required static assets into place and run a
+# local server at
 #
 #   http://localhost:3000
 #
-yarn start:client
+npm run start:client
 
-# Same deal with the Server. This will run `poetry` to install dependencies,
-# copy some required static assets into place and run a local server at
+# In the other session, start the Server. This will run `uv` to install
+# dependencies, copy some required static assets into place and run a
+# local server at
 #
 #   http://localhost:5000
 #
-yarn start:server
+npm run start:server
 ```
 
 That's it! Now navigate to http://localhost:3000 to use our spiffy app 🥳

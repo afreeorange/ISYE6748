@@ -1,10 +1,8 @@
 import { Col, Row, Alert } from "reactstrap";
 import { GoInfo } from "react-icons/go";
-import { ImLab, ImPointRight } from "react-icons/im";
-import { TbBrandPython, TbCircle1, TbCircle2 } from "react-icons/tb";
+import { ImPointRight } from "react-icons/im";
+import { TbCircle1, TbCircle2 } from "react-icons/tb";
 import { TiHeartFullOutline } from "react-icons/ti";
-import { RiTeamLine } from "react-icons/ri";
-import { TbBrandCodepen } from "react-icons/tb";
 
 import Nikhil from "./nikhil.jpg";
 import William from "./william.jpg";
@@ -26,30 +24,26 @@ const Component: React.FC = () => (
       <Col>
         <Alert color="danger mt-2">
           <ImPointRight className="icon" /> This is a project by{" "}
-          <span className="fw-800">graduate students</span> who are attempting
-          to <span className="fw-800">fulfill their degree requirements</span>{" "}
+          <span className="fw-600">graduate students</span> who are attempting
+          to <span className="fw-600">fulfill their degree requirements</span>{" "}
           and who are{" "}
-          <span className="fw-800">
+          <span className="fw-600">
             eminently unqualified in the medical domain
           </span>
           . We understand that this is on the public internet but if you're not
           our friend, family member, or project sponsor, and have somehow
           stumbled here,{" "}
-          <strong className="fw-800">
+          <strong className="fw-600">
             you'd have to be very, very daft to use this resource for any
             medical advice
           </strong>
           . If you do, we are{" "}
-          <strong className="fw-800">absolutely not liable</strong> for anything
+          <strong className="fw-600">absolutely not liable</strong> for anything
           that may happen to you as a result of you employing this resource to
           inform any decision pertaining to your health.
         </Alert>
 
-        <section className="mt-4">
-          <h3 className="fw-600 my-3">
-            <RiTeamLine className="icon" /> The Project
-          </h3>
-
+        <section className="mt-5">
           <Row className="mt-5 mb-4">
             <Col className="text-center">
               <div className="team-member ">
@@ -88,16 +82,16 @@ const Component: React.FC = () => (
             some lovely folks at{" "}
             <a href="https://www.capgemini.com/us-en/">Capgemini</a>. This
             website is the result of an{" "}
-            <span className="fw-600">"Applied Analytics Practicum"</span> where
-            we attempt to prove to our University that we are worthy of being
-            awarded a degree.
+            <span className="fw-600">
+              &#8220;Applied Analytics Practicum&#8221;
+            </span>{" "}
+            where we attempt to prove to our University that we are worthy of
+            being awarded a degree.
           </p>
         </section>
 
-        <section className="mt-4">
-          <h3 className="fw-600 my-3">
-            <ImLab className="icon" /> The Analysis
-          </h3>
+        <section className="mt-5">
+          <h3 className="fw-600 my-3">Analysis</h3>
           <p>
             The long and short of it is: We used{" "}
             <span className="fw-600">
@@ -123,10 +117,8 @@ const Component: React.FC = () => (
           </p>
         </section>
 
-        <section className="mt-4">
-          <h3 className="fw-600 my-3">
-            <TbBrandPython className="icon" /> The Code
-          </h3>
+        <section className="mt-5">
+          <h3 className="fw-600 my-3">Code</h3>
           <p>
             You can find all our analyses and code for this website and its
             backend in our{" "}
@@ -148,10 +140,8 @@ const Component: React.FC = () => (
           </p>
         </section>
 
-        <section className="mt-4">
-          <h3 className="fw-600 my-3">
-            <TbBrandCodepen className="icon" /> Other Stuff
-          </h3>
+        <section className="mt-5">
+          <h3 className="fw-600 my-3">Other Stuff</h3>
           <p>
             This web application uses the the privacy-friendly{" "}
             <a href="https://plausible.io/">Plausible</a> for analytics (

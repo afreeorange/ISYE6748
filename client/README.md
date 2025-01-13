@@ -4,16 +4,16 @@ The frontend interface to our model. Here's what you can do here:
 
 ```bash
 # Install dependencies
-yarn
+npm i
 
 # Start local server
-yarn start
+npm run start
 
 # Build the site
-yarn build
+npm run build
 
 # Clean any built artifacts
-yarn clean
+npm run clean
 ```
 
-You really should go one level above this repo and type `yarn start:client` 🤷‍♀️
+You really should go one level above this repo and type `npm run start:client` 🤷‍♀️

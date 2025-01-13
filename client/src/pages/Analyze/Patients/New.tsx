@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ImPointRight, ImLab } from "react-icons/im";
+import { ImLab } from "react-icons/im";
 import { Alert, Button, Col, Row, Spinner } from "reactstrap";
 import ConditionSearchBox from "../../../components/ConditionSearchBox";
 import Avatar from "../../../components/PatientAvatar";
@@ -8,8 +8,6 @@ import { StateContext } from "../../../state/Provider";
 import services from "../../../services/api";
 import Results from "./Results";
 import UpstreamError from "../../../components/UpstreamError";
-
-import "./New.css";
 
 const BuildABear: React.FC = () => {
   const {
@@ -64,14 +62,7 @@ const BuildABear: React.FC = () => {
           I want to <span className="fw-600">examine the journey</span> of an{" "}
           <span className="fw-800">new patient</span> with{" "}
           {newPatientConditions.length === 0 ? (
-            <span>
-              a profile I will create.{" "}
-              <span className="text-muted-more fw-300">
-                Use the search box below to add{" "}
-                <span className="fw-600">up to five conditions</span> to this
-                new patient's profile.{" "}
-              </span>
-            </span>
+            <span>a profile I will create.</span>
           ) : (
             <span>
               {newPatientConditions
@@ -150,17 +141,23 @@ const Component: React.FC = () => {
 
   return (
     <>
-      <Alert color="danger" className="mt-3">
-        <ImPointRight className="icon" /> This feature is a{" "}
+      <Alert color="warning" className="mt-3">
+        This feature is a{" "}
         <span className="fw-600">user-experience experiment</span>, is{" "}
-        <span className="fw-600">unfinished</span>, and will display journey of
-        a randomly chosen member. Please{" "}
-        <a href="/Report.pdf" className="link-danger">
+        <span className="fw-600">unfinished</span>, and will display the journey
+        of a randomly chosen member. Please{" "}
+        <a
+          href="/Report.pdf"
+          className="link-warning fw-600"
+          style={{
+            color: "#664d03",
+          }}
+        >
           read our report
         </a>{" "}
-        for more information on the challenges of implementing this feature.{" "}
-        <span className="fw-600"> We do hope to make it work well in the future</span>. In the
-        meantime, please enjoy playing around with our proposed interface!
+        for more information on the challenges of implementing this feature. We
+        do hope to make it work well in the future. In the meantime, please
+        enjoy playing around with our proposed interface!
       </Alert>
 
       {newPatientSearchState === "idle" && <BuildABear />}

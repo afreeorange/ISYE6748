@@ -29,7 +29,7 @@ def similar_conditions(icd10_code):
     except ValueError as e:
         abort(404, str(e))
     except Exception as e:
-        print(e)
+        print("ERROR:", e)
         abort(500, "Something bad happened on the server. Sorry.")
 
     return jsonify(ret)
@@ -53,7 +53,7 @@ def similar_patients(member_life_id):
     except ValueError as e:
         abort(404, str(e))
     except Exception as e:
-        print(e)
+        print("ERROR:", e)
         abort(500, "Something bad happened on the server. Sorry.")
 
     return jsonify(ret)
@@ -88,7 +88,7 @@ def patient_conditions(member_life_id):
     except MemberNotFoundException:
         abort(404, "Could not find a patient with that Member Life ID")
     except Exception as e:
-        print(e)
+        print("ERROR:", e)
         abort(500, "Something bad happened on the server. Sorry.")
 
     return jsonify(ret)

@@ -1,27 +1,12 @@
 # ICD10.ninja - Server
 
-👉 This is stuff for project maintainers. If you just want to start this server, go one level above this folder and type `yarn start:server` and head to http://localhost:5000.
-
 ## Local Development
 
-You will need Python 3.10+ and [Poetry](https://python-poetry.org/) installed whichever way you please (we like [`pyenv`](https://github.com/pyenv/pyenv)). Then,
+You will need Python 3.11+ and [`uv`](https://docs.astral.sh/uv/) (note that you can use `uv` to manage Python versions as well).
 
 ```bash
-# Set the virtual environment to be in this folder.
-# Helps with IntelliSense in your favorite editor.
-poetry config virtualenvs.in-project true
-
-# Install dependencies locally
-poetry install --no-root
-
-# Run the local server
-FLASK_DEBUG=1 poetry run flask --app server run
-
-# If you add any dependencies, make sure you export poetry dependencies
-# in pip format for the server. This is because this is easier (for me)
-# to NOT deal with another 'thing' (poetry) I have to install on the
-# deployed server. Yay Python...
-poetry export --without-hashes --format=requirements.txt > requirements.txt
+# Run the server.
+FLASK_DEBUG=1 uv run flask --app server run
 ```
 
 ### The Endpoints
@@ -80,13 +65,15 @@ Deployed to EC2 instances behind an Application Load Balancer (ALB). We're using
 
 ### Server Provisioning
 
+You're wrangling Parquet files and will need at least 16GiB of memory. I used `r8g.large` instances
+
 Clone this repo as user `ubuntu` and run the provisioning script as `root`.
 
 ```bash
 # As ubuntu
 cd
 git clone https://github.com/afreeorange/ISYE6748.git project
-sudo su -
+sudo su
 cd project
 ./scripts/provision-server.sh
 ```
@@ -101,3 +88,7 @@ curl --unix-socket /run/gunicorn.sock localhost
 journalctl -u gunicorn.service -f
 journalctl -u nginx.service -f
 ```
+
+### Other Notes
+
+[See this SO answer](https://stackoverflow.com/a/75672806) for when you will inevitably be unable to get your vanilla CloudFront behaviour to talk to your ALB (and get HTTP 502s).

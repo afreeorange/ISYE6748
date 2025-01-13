@@ -12,6 +12,6 @@ echo "Done"
 
 echo "Installing dependencies"
 pushd server
-poetry install --no-root
+uv sync
 popd
 echo "Done"
