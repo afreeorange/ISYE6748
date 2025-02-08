@@ -15,6 +15,7 @@ export const getPatient = async (
 ): Promise<PatientData> => {
   if (mock) {
     await simulateLatency();
+
     return processSimilarityResponse({
       ...MOCK_PATIENT_DATA,
       thisPatient: {
@@ -55,6 +56,8 @@ export const getNewPatient = async (
   console.log(`Received conditions: ${conditions}`);
 
   if (mock) {
+    await simulateLatency();
+
     return processSimilarityResponse({
       ...MOCK_PATIENT_DATA,
       thisPatient: {
@@ -92,6 +95,8 @@ export const getConditions = async (
   mock: boolean = false
 ): Promise<RelatedConditionsData> => {
   if (mock) {
+    await simulateLatency();
+
     return MOCK_SIMILAR_CONDITIONS;
   }
 

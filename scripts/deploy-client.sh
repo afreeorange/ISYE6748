@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+rm -rf client/dist
 ./scripts/setup-client.sh
 
 pushd client
@@ -9,7 +10,7 @@ echo "Building website"
 pnpm build
 
 echo "Deploying to the ⛅️"
-aws s3 sync build/ s3://icd10.ninja/ --delete
+aws s3 sync dist/ s3://icd10.ninja/ --delete
 popd
 
 echo "‼️ Don't forget to run an invalidation!"

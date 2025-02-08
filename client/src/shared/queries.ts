@@ -1,8 +1,10 @@
 import { QueryClient } from "@tanstack/react-query";
 
 /**
- * If you don't want to work with the real API, you can add a `true` to the
- * service calls.
+ * If you don't want to work with the real API, run this
+ *
+ *    DEMO_MODE=true pnpm dev
+ *
  */
 import { getPatient, getNewPatient, getConditions } from "./service";
 
@@ -20,7 +22,7 @@ export const queryClient = new QueryClient({
 export const knownPatientQuery = (id: string) => ({
   queryKey: ["patient", "known", id],
   queryFn: async () => {
-    const response = await getPatient(id);
+    const response = await getPatient(id, __DEMO_MODE__);
     return response;
   },
 });
@@ -28,7 +30,7 @@ export const knownPatientQuery = (id: string) => ({
 export const newPatientQuery = (conditions: string[]) => ({
   queryKey: ["patient", "new", conditions.join("")],
   queryFn: async () => {
-    const response = await getNewPatient(conditions);
+    const response = await getNewPatient(conditions, __DEMO_MODE__);
     return response;
   },
 });
@@ -36,7 +38,7 @@ export const newPatientQuery = (conditions: string[]) => ({
 export const conditionQuery = (code: string) => ({
   queryKey: ["condition", code],
   queryFn: async () => {
-    const response = await getConditions(code);
+    const response = await getConditions(code, __DEMO_MODE__);
     return response;
   },
 });

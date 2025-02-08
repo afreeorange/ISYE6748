@@ -12,4 +12,7 @@ export default defineConfig({
       },
     },
   },
+  define: {
+    __DEMO_MODE__: process.env.DEMO_MODE || false,
+  },
 });
