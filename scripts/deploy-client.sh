@@ -2,11 +2,11 @@
 
 set -euo pipefail
 
-npm run setup:client
+./scripts/setup-client.sh
 
 pushd client
 echo "Building website"
-npm run build
+pnpm build
 
 echo "Deploying to the ⛅️"
 aws s3 sync build/ s3://icd10.ninja/ --delete

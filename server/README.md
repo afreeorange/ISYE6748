@@ -65,7 +65,7 @@ Deployed to EC2 instances behind an Application Load Balancer (ALB). We're using
 
 ### Server Provisioning
 
-You're wrangling Parquet files and will need at least 16GiB of memory. I used `r8g.large` instances
+You're wrangling Parquet files and will need at least 16GiB of memory. I used `r8g.large` instances.
 
 Clone this repo as user `ubuntu` and run the provisioning script as `root`.
 

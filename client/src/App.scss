@@ -1,0 +1,135 @@
+@use "./fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-x-clip pb-12;
+  font-family: "84204FFF-79F6-4EF4-94F5-6CD6CA6CA761", -apple-system,
+    BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+    Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+a.link {
+  @apply underline-offset-2 decoration-1 cursor-pointer;
+}
+
+.prose {
+  p {
+    @apply my-4;
+  }
+
+  a.link {
+    @apply decoration-2;
+  }
+}
+
+.patient-avatar svg {
+  border-radius: 50%;
+}
+
+.no-patient-selected {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+// Here be tables
+
+table {
+  @apply w-full;
+
+  td {
+    @apply align-top;
+  }
+}
+
+.icd-table {
+  @apply mt-4 mb-4;
+
+  thead {
+    @apply text-sm;
+  }
+
+  td,
+  th {
+    @apply py-1 px-2 text-left;
+  }
+
+  td {
+    @apply border-t;
+  }
+}
+
+.frequency-table {
+  @apply mt-2 mb-2 text-sm;
+
+  td {
+    @apply py-1 px-2 text-left;
+  }
+
+  td:nth-of-type(1) {
+    @apply w-24 align-top;
+  }
+
+  td:nth-of-type(3) {
+    @apply w-12 text-right font-mono;
+  }
+
+  tr:not(:first-of-type) td {
+    @apply border-t;
+  }
+}
+
+.condition-selection-table {
+  td {
+    @apply py-0.5 px-2;
+  }
+
+  td:nth-of-type(2),
+  td:nth-of-type(3) {
+    @apply w-24;
+  }
+
+  tr.checked {
+    @apply font-semibold;
+  }
+
+  tr:not(.checked) {
+    @apply opacity-50 transition-all;
+
+    &:hover {
+      @apply opacity-100 bg-success text-white;
+
+      .badge {
+        @apply badge-outline;
+        color: white !important;
+      }
+    }
+
+    .badge {
+      @apply badge-outline;
+    }
+  }
+
+  tr:not(:first-of-type) td {
+    @apply border-t;
+  }
+}
+
+.similar-conditions-table {
+  @apply w-full;
+
+  td:nth-of-type(2),
+  td:nth-of-type(3) {
+    @apply w-24;
+  }
+
+  td {
+    @apply py-0.5;
+  }
+
+  tr:not(:first-of-type) td {
+    @apply border-t;
+  }
+}

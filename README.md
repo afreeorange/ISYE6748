@@ -6,7 +6,7 @@ Team Repository for the Applied Practicum at [Georgia Tech's Analytics Program](
 
 ## About this Project
 
-Please see our [Midterm Presentation](https://github.com/afreeorange/ISYE6748/blob/master/Mid-term%20Presentation/Presentation.pdf) for an overview and [the Final Report](https://github.com/afreeorange/ISYE6748/blob/master/Final%20Report/Report.pdf) for our details on our implementation.
+Please see our [Midterm Presentation](https://icd10.ninja/midterm-report.pdf) for an overview and [the Final Report](https://icd10.ninja/report.pdf) for our details on our implementation.
 
 The results of our analysis and modeling are expressed via a Web Application (an SPA built with React) and an API server (a Flask application in Python). We will describe how to run these locally but if you don't want to bother, both are publicly available at [https://icd10.ninja](https://icd10.ninja)
 
@@ -14,8 +14,8 @@ The results of our analysis and modeling are expressed via a Web Application (an
 
 You will need:
 
-- `bash` v4+. If you're on Windows, you can use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
-- [Node](https://nodejs.org/en/download/) v18+
+- `bash`
+- [Node](https://nodejs.org/en/download/) v21+ with [`pnpm`](https://pnpm.io/)
 - [Python](https://www.python.org/downloads/) v3.10+ with [`uv` installed](https://docs.astral.sh/uv/getting-started/installation/) (you can use the latter to install Python itself).
 
 Once you're set with these, open two terminal sessions.
@@ -25,9 +25,10 @@ Once you're set with these, open two terminal sessions.
 # dependencies, copy some required static assets into place and run a
 # local server at
 #
-#   http://localhost:3000
+#   http://localhost:5173
 #
-npm run start:client
+./scripts/setup-client.sh
+./scripts/start-client.sh
 
 # In the other session, start the Server. This will run `uv` to install
 # dependencies, copy some required static assets into place and run a
@@ -35,30 +36,22 @@ npm run start:client
 #
 #   http://localhost:5000
 #
-npm run start:server
+./scripts/setup-server.sh
+./scripts/start-server.sh
 ```
 
-That's it! Now navigate to http://localhost:3000 to use our spiffy app 🥳
+That's it! Now navigate to http://localhost:5173 to use our spiffy app 🥳
 
-## Analysis and Modeling
+## Repository Structure
 
-All the notebooks and scripts we used to generate data for our analysis, conduct analysis, and evaluate our approches are in the `./analysis`. Please see [`./analysis/README.md`](https://github.com/afreeorange/ISYE6748/blob/master/analysis/README.md) for further information.
-
-## Data
-
-The `./data` folder contains _all_ the data we used and generated for this project. Please see [`./data/README.md`](https://github.com/afreeorange/ISYE6748/blob/master/data/README.md) for further information.
-
-## Client/Frontend
-
-The `./client` folder contains a React-based SPA. You can see `./client/README.md` for some commands. You are encouraged to run `yarn start:client` from this folder, however.
-
-## Server/Backend
-
-The `./server` folder contains a Flask-based server that implements our modeling approach via a few REST endpoints. See [`./server/README.md`](https://github.com/afreeorange/ISYE6748/blob/master/server/README.md) for a listing of these endpoints and more information.
-
-## Other Stuff
-
-You will also find our Final Report, Midterm Presentation, and other assorted references in their appropriately named folders. The `./scripts` folder contains many conveniences that help you start the client and server, deploy the web app, and so on.
+| Folder      | Description                                                                                                            | README                                                                          |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `analysis`  | All the notebooks and scripts we used to generate data for our analysis, conduct analysis, and evaluate our approches. | [Link](https://github.com/afreeorange/ISYE6748/blob/master/analysis/README.md)  |
+| `client`    | The Frontend Client, an SPA written in React, and deployed to https://icd10.ninja                                      |                                                                                 |
+| `data`      | All the data we both used and generated for the project.                                                               | [Link](https://github.com/afreeorange/ISYE6748/blob/master/data/README.md)      |
+| `documents` | Reports, presentations, references, notes.                                                                             | [Link](https://github.com/afreeorange/ISYE6748/blob/master/documents/README.md) |
+| `scripts`   | All scripts required to run this project locally and deploy it wherever. To be run from the root of this repo.         |                                                                                 |
+| `server`    | A Flask-based server that implements our modeling approach via a few REST endpoints.                                   | [Link](https://github.com/afreeorange/ISYE6748/blob/master/server/README.md)    |
 
 ## License
 

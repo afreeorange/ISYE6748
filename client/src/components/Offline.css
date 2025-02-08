@@ -1,8 +1,0 @@
-.offline {
-  background: var(--color-red);
-  color: var(--color-foreground);
-}
-
-.offline a {
-  color: var(--color-foreground);
-}

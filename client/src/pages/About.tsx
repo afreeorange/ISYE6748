@@ -1,165 +1,172 @@
-import { Col, Row, Alert } from "reactstrap";
-import { GoInfo } from "react-icons/go";
-import { ImPointRight } from "react-icons/im";
-import { TbCircle1, TbCircle2 } from "react-icons/tb";
-import { TiHeartFullOutline } from "react-icons/ti";
+import {
+  PiBookOpenTextDuotone,
+  PiHandHeartDuotone,
+  PiHandPointingDuotone,
+  PiPresentationChartDuotone,
+} from "react-icons/pi";
+import { H1, H2 } from "../shared/components";
 
-import Nikhil from "./nikhil.jpg";
-import William from "./william.jpg";
-import Shrea from "./shrea.jpg";
-
-import "./About.css";
-
-const Component: React.FC = () => (
-  <div className="about">
-    <Row>
-      <Col>
-        <h1 className="border-bottom pb-2">
-          <GoInfo className="text-info icon" />{" "}
-          <span className="fw-600">About</span>
-        </h1>
-      </Col>
-    </Row>
-    <Row>
-      <Col>
-        <Alert color="danger mt-2">
-          <ImPointRight className="icon" /> This is a project by{" "}
-          <span className="fw-600">graduate students</span> who are attempting
-          to <span className="fw-600">fulfill their degree requirements</span>{" "}
-          and who are{" "}
-          <span className="fw-600">
-            eminently unqualified in the medical domain
-          </span>
-          . We understand that this is on the public internet but if you're not
-          our friend, family member, or project sponsor, and have somehow
-          stumbled here,{" "}
-          <strong className="fw-600">
-            you'd have to be very, very daft to use this resource for any
-            medical advice
-          </strong>
-          . If you do, we are{" "}
-          <strong className="fw-600">absolutely not liable</strong> for anything
-          that may happen to you as a result of you employing this resource to
-          inform any decision pertaining to your health.
-        </Alert>
-
-        <section className="mt-5">
-          <Row className="mt-5 mb-4">
-            <Col className="text-center">
-              <div className="team-member ">
-                <img
-                  src={Nikhil}
-                  alt="Nikhil Anand"
-                  className="rounded-circle"
-                />
-                <small className="d-block mt-3 text-muted">Nikhil Anand</small>
-              </div>
-            </Col>
-            <Col className="text-center">
-              <div className="team-member">
-                <img
-                  src={William}
-                  alt="William Lam"
-                  className="rounded-circle"
-                />
-                <small className="d-block mt-3 text-muted">William Lam</small>
-              </div>
-            </Col>
-            <Col className="text-center">
-              <div className="team-member">
-                <img src={Shrea} alt="Shrea Shyam" className="rounded-circle" />
-                <small className="d-block mt-3 text-muted">Shrea Shyam</small>
-              </div>
-            </Col>
-          </Row>
-
-          <p className="mt-5">
-            We are graduate students at the Georgia Institute of Technology's{" "}
-            <a href="https://www.analytics.gatech.edu/">
-              Analytics &amp; Data Science Program
-            </a>
-            . Our project was sponsored by Ananth Venugopal and Shyamsree Nandi,
-            some lovely folks at{" "}
-            <a href="https://www.capgemini.com/us-en/">Capgemini</a>. This
-            website is the result of an{" "}
-            <span className="fw-600">
-              &#8220;Applied Analytics Practicum&#8221;
-            </span>{" "}
-            where we attempt to prove to our University that we are worthy of
-            being awarded a degree.
-          </p>
-        </section>
-
-        <section className="mt-5">
-          <h3 className="fw-600 my-3">Analysis</h3>
-          <p>
-            The long and short of it is: We used{" "}
-            <span className="fw-600">
-              Normalized Cosine Similarity matrices
-            </span>{" "}
-            to <TbCircle1 className="icon" /> find patients who share similar
-            medical journeys, and <TbCircle2 className="icon" /> find conditions
-            related to a given condition. We then used{" "}
-            <span className="fw-600">
-              Item-Item Similarity-Based Collaborative Filtering
-            </span>{" "}
-            to find conditions that a given patient had the greatest
-            risk/potential of developing.
-          </p>
-          <p>
-            We encourage you to{" "}
-            <a href="/Report.pdf" className="fw-600">
-              read our report
-            </a>{" "}
-            for a good overview of Recommendation Systems, their application to
-            the problem we tried to solve, and the details and drawbacks of our
-            implementation.
-          </p>
-        </section>
-
-        <section className="mt-5">
-          <h3 className="fw-600 my-3">Code</h3>
-          <p>
-            You can find all our analyses and code for this website and its
-            backend in our{" "}
-            <a
-              href="https://github.com/afreeorange/ISYE6748"
-              title="Link to project repository on Github"
-            >
-              project's Github repository
-            </a>
-            . It's{" "}
-            <a
-              href="https://www.gnu.org/licenses/quick-guide-gplv3.html"
-              title="Quick Guide to GNU GPLv3"
-            >
-              GNU GPLv3
-            </a>{" "}
-            licensed so go crazy! If you do improve this project, please send us
-            a pull request. Thank you <TiHeartFullOutline className="icon" />
-          </p>
-        </section>
-
-        <section className="mt-5">
-          <h3 className="fw-600 my-3">Other Stuff</h3>
-          <p>
-            This web application uses the the privacy-friendly{" "}
-            <a href="https://plausible.io/">Plausible</a> for analytics (
-            <a
-              href="https://plausible.io/icd10.ninja/"
-              title="Link to Plausible dashboard"
-            >
-              the dashboard is public
-            </a>
-            ) and does not set any cookies or use any creepy telemetry. It was
-            developed using <a href="https://reactjs.org/">React</a> and{" "}
-            <a href="https://flask.palletsprojects.com/en/2.2.x/">Flask</a> and
-            is hosted by a popular cloud services provider.
-          </p>
-        </section>
-      </Col>
-    </Row>
+const Author: React.FC<{
+  name: string;
+  src: string;
+}> = ({ name, src }) => (
+  <div>
+    <img
+      className="w-48 h-48 rounded-badge border p-2"
+      src={src}
+      alt={`Photo of ${name}`}
+    />
+    <p className="block md:text-center mt-4 md:text-sm">{name}</p>
   </div>
 );
 
-export default Component;
+const About = () => (
+  <div className="prose">
+    <H1>About</H1>
+    <H2>Disclaimer</H2>
+    <div className="md:flex md:gap-2">
+      <PiHandPointingDuotone className="inline rotate-90 mr-1 text-red-500 md:w-32 md:h-8" />
+      <div className="inline">
+        This is a project by graduate students who are attempting to fulfill
+        their degree requirements and who are eminently unqualified in the
+        medical domain. We understand that this is on the public internet but if
+        you're not our friend, family member, or project sponsor, and have
+        somehow stumbled here,{" "}
+        <strong className="font-semibold">
+          you'd have to be very daft to use this resource for any medical advice
+        </strong>
+        . If you do,{" "}
+        <strong className="font-semibold">
+          we are absolutely not liable for anything that may happen to you
+        </strong>{" "}
+        as a result of you employing this resource to inform any decision
+        pertaining to your health.
+      </div>
+    </div>
+    <H2>Authors</H2>
+    <div className="md:flex md:justify-evenly mb-4 mt-12">
+      <Author name="Nikhil Anand" src="/nikhil.jpg" />
+      <Author name="William Lam" src="/william.jpg" />
+      <Author name="Shrea Shyam" src="/shrea.jpg" />
+    </div>
+    <p>
+      We are graduate students at the Georgia Institute of Technology's{" "}
+      <a
+        className="link"
+        href="https://www.analytics.gatech.edu/"
+        title="The Georgia Tech Analytics Program"
+      >
+        Analytics & Data Science Program
+      </a>
+      . Our project was sponsored by Ananth Venugopal and Shyamsree Nandi at{" "}
+      <a
+        className="link"
+        href="https://www.capgemini.com/us-en/"
+        title="The Capgemini Website"
+      >
+        Capgemini
+      </a>
+      . This website is the result of an “Applied Analytics Practicum” where we
+      attempt to prove to our University that we are worthy of being awarded a
+      degree.
+    </p>
+    <p>
+      The long and short of it is: We used{" "}
+      <strong className="font-semibold">
+        Normalized Cosine Similarity matrices
+      </strong>{" "}
+      to &#9312; find patients who share similar medical journeys, and &#9313;
+      find conditions related to a given condition. We then used{" "}
+      <strong className="font-semibold">
+        Item-Item Similarity-Based Collaborative Filtering
+      </strong>{" "}
+      to find conditions that a given patient had the greatest risk of
+      developing.
+    </p>
+    <p>
+      We provide a a good overview of Recommendation Systems, their application
+      to the problem we tried to solve, and the details and drawbacks of our
+      implementation in our report.
+    </p>
+    <div className="mt-8 mx-auto max-w-96 text-center">
+      <a
+        href="/report.pdf"
+        className="btn btn-success text-white text-xl btn-lg w-full"
+      >
+        <PiBookOpenTextDuotone className="text-4xl mr-2" /> Read Our Final
+        Report
+      </a>
+
+      <a
+        href="/midterm-report.pdf"
+        className="btn btn-success btn-outline text-lg mt-4 w-full"
+      >
+        <PiPresentationChartDuotone className="text-2xl mr-2" /> See Our Midterm
+        Presentation
+      </a>
+    </div>
+
+    <H2>Code</H2>
+    <p>
+      You can find all our analyses and code for this website and its backend in
+      our{" "}
+      <a
+        className="link"
+        href="https://github.com/afreeorange/ISYE6748"
+        title="Link to project repository on Github"
+      >
+        project's Github repository
+      </a>
+      . It's{" "}
+      <a
+        className="link"
+        href="https://www.gnu.org/licenses/quick-guide-gplv3.html"
+        title="Quick Guide to GNU GPLv3"
+      >
+        GNU GPLv3
+      </a>{" "}
+      licensed so if you start hacking this project, please send us a pull
+      request. Thank you <PiHandHeartDuotone className="inline" />
+    </p>
+
+    <H2>Other Stuff</H2>
+    <p>
+      This website uses the privacy-friendly{" "}
+      <a
+        className="link"
+        href="https://plausible.io/"
+        title="Plausible: Privacy-friendly analytics"
+      >
+        Plausible
+      </a>{" "}
+      for analytics (
+      <a
+        className="link"
+        href="https://plausible.io/icd10.ninja/"
+        title="Link to Plausible dashboard"
+      >
+        the dashboard is public
+      </a>
+      ) and does not set any cookies or use any creepy telemetry. It was
+      developed using{" "}
+      <a
+        className="link"
+        href="https://reactjs.org/"
+        title="React Documentation"
+      >
+        React
+      </a>{" "}
+      and{" "}
+      <a
+        className="link"
+        title="Flask Documentation"
+        href="https://flask.palletsprojects.com/en/2.2.x/"
+      >
+        Flask
+      </a>{" "}
+      and is hosted by a popular cloud services provider.
+    </p>
+  </div>
+);
+
+export default About;
