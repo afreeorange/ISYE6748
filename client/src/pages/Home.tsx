@@ -58,7 +58,7 @@ const Home = () => (
           <PiBookOpenTextDuotone className="inline ml-0.5" />
         </div>
 
-        <div className="mt-8 text-sm border border-dotted mx-auto px-4 py-2 rounded-lg text-left shadow-sm text-yellow-500 border-yellow-500">
+        <div className="mt-8 text-sm border mx-auto px-6 py-4 rounded-lg text-left shadow-sm text-yellow-500 border-yellow-500">
           <PiHandPointingDuotone className="inline align-middle rotate-90" />{" "}
           <strong>Please note:</strong> Our backend is rather heavy on our
           wallets and is{" "}
@@ -67,8 +67,14 @@ const Home = () => (
           <strong className="font-semibold">
             see stubborn, cached results
           </strong>
-          . Yeah, bummer. Please see our Github repository for information on
-          how to run our project locally.
+          . Yeah, bummer. Please see our Github repository for information on{" "}
+          <a
+            className="underline underline-offset-2 decoration-1 decoration-yellow-600"
+            href="https://github.com/afreeorange/ISYE6748/tree/master?tab=readme-ov-file#running-our-application-locally"
+          >
+            how to run our project locally
+          </a>
+          .
         </div>
       </div>
     </div>
