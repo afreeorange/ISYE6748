@@ -25,7 +25,7 @@ const Tile: React.FC<{
   <div className="flex my-10 gap-4">
     <div>{icon}</div>
     <div>
-      <h3 className="text-3xl leading-snug">
+      <h3 className="text-2xl md:text-3xl leading-snug">
         <NavLink className={"underline underline-offset-4"} to={to}>
           {title}
         </NavLink>{" "}

@@ -93,7 +93,7 @@ export const Navigation = () => {
           href="https://www.analytics.gatech.edu/"
           title="Link to the Georgia Tech Analytics program"
         >
-          <img alt="Tailwind CSS Navbar component" src="/logo-bee.png" />
+          <img alt="Buzz! The Georgia Tech Mascot!" src="/logo-bee.png" />
         </a>
       </div>
     </div>
@@ -101,7 +101,7 @@ export const Navigation = () => {
 };
 
 export const Footer = () => (
-  <footer className="py-5 text-sm text-center mt-12 mb-10">
+  <footer className="px-4 text-sm text-center mt-12 mb-10">
     <p>
       <NavLink to="/about" className="link">
         Disclaimer

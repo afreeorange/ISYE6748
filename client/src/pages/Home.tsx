@@ -11,8 +11,8 @@ import {
 import { H1 } from "../shared/components";
 
 const Home = () => (
-  <div className="hero">
-    <div className="hero-content text-center">
+  <div className="md:hero">
+    <div className="md:hero-content text-center">
       <div className="max-w-2xl">
         <H1>
           Hi there!{" "}
