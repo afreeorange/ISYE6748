@@ -27,8 +27,10 @@ export const H2: React.FC<{
   <h2 className={`text-3xl font-bold tracking-tight mb-4 mt-8`}>{children}</h2>
 );
 
-const NavItem: React.FC<React.HTMLProps<HTMLUListElement>> = (props) => (
-  <ul {...props}>
+const NinjaNavigation: React.FC<React.HTMLProps<HTMLUListElement>> = (
+  props
+) => (
+  <ul {...props} tabIndex={0}>
     <li>
       <NavLink to="/analyze">
         <PiFlaskDuotone /> Analyze
@@ -47,6 +49,18 @@ const NavItem: React.FC<React.HTMLProps<HTMLUListElement>> = (props) => (
   </ul>
 );
 
+const NinjaText: React.FC<React.HTMLProps<HTMLUListElement>> = () => (
+  <NavLink
+    className="btn btn-ghost text-2xl tracking-tight lowercase"
+    style={{
+      fontWeight: 600,
+    }}
+    to={"/"}
+  >
+    <span aria-label="Emoji of a Ninja">🥷</span> The ICD10 Ninja
+  </NavLink>
+);
+
 export const Navigation = () => {
   const [isOpen, setOpen] = useState(false);
   const { pathname } = useLocation();
@@ -59,6 +73,7 @@ export const Navigation = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
+        {/* Mobile Navigation */}
         <div className="dropdown">
           <div
             tabIndex={0}
@@ -68,25 +83,23 @@ export const Navigation = () => {
           >
             <GiHamburgerMenu className="text-2xl" />
           </div>
-          <NavItem
+          <NinjaNavigation
             className={`menu menu-lg dropdown-content bg-base-100 border rounded-box z-[1] mt-3 w-52 p-2 shadow-xl ${
               !isOpen && "hidden"
             }`}
           />
         </div>
-        <NavLink
-          className="btn btn-ghost text-2xl tracking-tight lowercase"
-          style={{
-            fontWeight: 600,
-          }}
-          to={"/"}
-        >
-          <span aria-label="Emoji of a Ninja">🥷</span> The ICD10 Ninja
-        </NavLink>
+
+        {/* "the icd10 ninja" */}
+        <NinjaText />
       </div>
+
+      {/* Desktop Navigation */}
       <div className="navbar-center hidden lg:flex">
-        <NavItem className="menu menu-horizontal px-1 text-lg" />
+        <NinjaNavigation className="menu menu-horizontal px-1 text-lg" />
       </div>
+
+      {/* Georgia Tech Logo */}
       <div className="navbar-end">
         <a
           className="w-9 mr-2 -mt-3 hover:scale-110 transition-all"
